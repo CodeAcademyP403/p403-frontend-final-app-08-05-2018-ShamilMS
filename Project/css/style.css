@@ -1,0 +1,1306 @@
+/* DEFAULT*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 153vh;
+    /* height: 2000px; */
+}
+
+/* NAV STYLING - START*/
+
+body>nav {
+    width: 256px;
+    height: 100%;
+    background-color: #333645;
+    /* padding-bottom: 11%; */
+    position: fixed;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+main {
+    width: 83%;
+    position: relative;
+    left: 256px;
+}
+
+nav header {
+    height: 54px;
+    ;
+    width: 100%;
+    background-color: #a48ad4;
+    text-align: center;
+}
+
+nav header h2 {
+    display: inline-block;
+    line-height: 200%;
+    color: white;
+    font-weight: lighter;
+}
+
+.search {
+    width: 100%;
+    height: 7%;
+    background-color: gray;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(197, 193, 193, 0.651);
+    background-color: #333645;
+    padding: 5%;
+    font-size: 1em;
+}
+
+.navUl {
+    text-align: left;
+    font-size: 0.8em;
+    margin-top: 3%;
+}
+
+.navUl li {
+    padding: 5%;
+    padding-left: 10%;
+    position: relative;
+    cursor: pointer;
+}
+
+.navUl a {
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.navUl a i {
+    margin-right: 10%;
+    width: 15px;
+}
+
+.rightIcon {
+    position: absolute;
+    right: 0;
+}
+
+.navUl>li:hover {
+    background-color: #27272b;
+    transition: 0.3s;
+}
+
+.navUl>li.slidedDown {
+    background-color: #00bdd5;
+}
+
+nav p:first-of-type {
+    border-bottom: 0.7px solid rgba(114, 111, 111, 0.651);
+}
+
+nav p {
+    color: white;
+    padding-left: 10%;
+    margin-top: 8%;
+    padding-bottom: 3%;
+    font-size: 0.8em;
+    position: relative;
+}
+
+nav p span {
+    position: absolute;
+    right: 10%;
+    font-weight: bold;
+}
+
+#dashboardSlider {
+    background-color: #1f1f20;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: none;
+}
+
+#dashboardSlider li {
+    list-style: none;
+    margin-left: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#dashboardSlider li::before {
+    content: "";
+    height: 100%;
+    width: 0.8px;
+    position: absolute;
+    left: -7px;
+    top: -9px;
+    background-color: #4a4a4b;
+}
+
+#dashboardSlider li:last-child::before {
+    content: "";
+    height: 92%;
+    /* Height has been changed */
+    width: 0.8px;
+    position: absolute;
+    left: -7px;
+    top: -9px;
+    background-color: #4a4a4b;
+}
+
+#dashboardSlider li::after {
+    content: "";
+    height: 0.8px;
+    width: 10px;
+    position: absolute;
+    left: -7px;
+    top: 13px;
+    background-color: #4a4a4b;
+}
+
+#dashboardSlider li a {
+    color: rgb(224, 220, 220);
+}
+
+#dashboardSlider li i {
+    font-size: 0.7em;
+    margin-right: 3%;
+    vertical-align: middle;
+}
+
+#dashboardSlider li:hover i {
+    color: rgb(38, 138, 163);
+    transition: 0.1s;
+}
+
+.progressBar {
+    width: 80%;
+    height: 10px;
+    background-color: rgb(255, 253, 253);
+    margin-left: 10%;
+}
+
+.progressBar span {
+    display: block;
+    height: 100%;
+}
+
+.pending span {
+    background-color: #896ebb;
+    width: 37%;
+}
+
+.approved span {
+    background-color: #359b2c;
+    width: 60%;
+}
+
+.rejected span {
+    background-color: #af2525;
+    width: 3%;
+}
+
+/* NAV STYLING - END*/
+
+/* MAIN STYLING - START*/
+
+main header {
+    height: 54px;
+    width: 100%;
+    padding-left: 1%;
+    display: flex;
+    border-bottom: 0.3px solid rgba(83, 79, 79, 0.603);
+    color: #1e1c1cbd;
+    position: relative;
+}
+
+.create, .explorer {
+    width: 130px;
+    vertical-align: middle;
+    line-height: 300%;
+    cursor: pointer;
+}
+
+.create {
+    width: 110px;
+}
+
+.create:hover, .explorer:hover {
+    background-color: #00bdd5;
+    color: white;
+    transition: 0.5s;
+}
+
+.create i, .explorer i {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+main header .closeIcon {
+    line-height: 175%;
+}
+
+main header .closeIcon i {
+    margin-right: 35px;
+    margin-left: 10px;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+main header .profileInfo {
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 360px;
+    position: absolute;
+    right: 0;
+}
+
+main header .profileInfo span {
+    line-height: 340%;
+    width: 20%;
+    padding-left: 3%;
+    padding-right: 3%;
+    cursor: pointer;
+    display: inline-block
+}
+
+main header .profileInfo span i {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+main header .profileInfo img {
+    height: 80%;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+main header .profileInfo span:hover {
+    background-color: #00bdd5;
+    color: white;
+    transition: 0.5s;
+}
+
+#maryRiley {
+    width: 35%;
+    margin-right: 2%;
+}
+
+main>nav {
+    border-bottom: 0.3px solid rgba(83, 79, 79, 0.603);
+}
+
+main>nav ul {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+main>nav ul li {
+    list-style-type: none;
+    display: inline;
+    cursor: pointer;
+}
+
+main>nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 0.6em;
+}
+
+main>nav ul li a i {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+main>nav ul li a.selected {
+    color: rgb(19, 128, 179);
+}
+
+main>nav ul li i.fa-home {
+    margin-left: 20px;
+}
+
+main .welcome {
+    padding-left: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: rgb(88, 86, 86);
+    border-bottom: 0.3px solid rgba(83, 79, 79, 0.603);
+}
+
+main .welcome h2, p {
+    margin-top: 1%;
+    font-weight: lighter;
+}
+
+main section.statistics {
+    width: 100%;
+    height: 110px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    background-color: rgba(233, 227, 227, 0.294);
+}
+
+main section.statistics div:nth-child(1) {
+    background-color: #ec531f;
+}
+
+main section.statistics div:nth-child(2) {
+    background-color: #6a7374;
+}
+
+main section.statistics div:nth-child(3) {
+    background-color: #13b42b;
+}
+
+main section.statistics div:nth-child(4) {
+    background-color: #7863a0;
+}
+
+main section.statistics div {
+    position: relative;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 3px;
+    width: 25%;
+    height: 100%;
+    text-align: right;
+    color: white;
+    border-radius: 3px;
+}
+
+main section.statistics div i {
+    font-size: 2em;
+    margin-left: 5%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main section.statistics div p {
+    font-family: 'Abel', sans-serif;
+}
+
+.calendarSection {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    padding: 1%;
+}
+
+.calendarSection, .statisticSection {
+    background-color: #b3abab4b;
+}
+
+.calendarHolder {
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    margin-right: 1%;
+    display: flex;
+}
+
+.projectFeed {
+    width: 30%;
+    height: 100%;
+    margin-left: 1%;
+    position: relative;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.projectFeed .projectFeedHeader {
+    height: 10%;
+    padding-top: 3%;
+    margin-bottom: 2%;
+    padding-left: 1%;
+}
+
+.projectFeed .projectFeedHeader p {
+    font-size: 0.8em;
+    color: rgb(70, 67, 67);
+    margin-left: 10px;
+}
+
+.projectFeed .projectFeedHeader p i {
+    position: absolute;
+    right: 4%;
+    color: #078fc3;
+    cursor: pointer;
+}
+
+.projectFeed section div {
+    padding-left: 2%;
+}
+
+.projectFeed section p {
+    display: block;
+    position: relative;
+}
+
+.projectFeed section .projectFeedWrapper img {
+    width: 50px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.projectFeed section .projectFeedWrapper {
+    height: 5%;
+    display: flex;
+    font-size: 0.8em;
+    border-bottom: 0.1px solid #dbd7d7;
+    color: rgb(143, 138, 138);
+    padding: 4% 0%;
+}
+
+.projectFeed section .projectFeedWrapper:hover {
+    background-color: rgba(236, 230, 230, 0.527);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.projectFeed section .projectFeedWrapper .name {
+    color: rgb(24, 23, 23);
+    font-weight: bold;
+}
+
+.projectFeed section .projectFeedWrapper .highlighted, .taskList .highlighted {
+    /* background-color: #34a8d6; */
+    color: white;
+    padding: 0.8% 2.4%;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.projectFeed section>div:nth-child(1), .projectFeed section>div:nth-child(3), .projectFeed section>div:nth-child(9) {
+    border-left: 1.5px solid #34a8d6;
+}
+
+.projectFeed section>div:nth-child(1) .highlighted, .projectFeed section>div:nth-child(3) .highlighted, .projectFeed section>div:nth-child(9) .highlighted {
+    background-color: #34a8d6;
+}
+
+.projectFeed section>div:nth-child(5) {
+    border-left: 1.5px solid rgb(21, 150, 59);
+}
+
+.projectFeed section>div:nth-child(5) .highlighted {
+    background-color: rgb(21, 150, 59);
+}
+
+.projectFeed section>div:nth-child(7) {
+    border-left: 1.5px solid rgb(218, 44, 151);
+}
+
+.projectFeed section>div:nth-child(7) .highlighted {
+    background-color: rgb(218, 44, 151);
+}
+
+.projectFeed section .projectFeedWrapper div:nth-child(2) {
+    width: 100%;
+    line-height: 150%;
+}
+
+.projectFeed section .projectFeedWrapper .rightAlign {
+    position: absolute;
+    right: 10px;
+}
+
+.projectFeed section .projectFeedSliderDown {
+    padding-left: 82px;
+    font-size: 0.8em;
+    color: #666262;
+    display: none;
+}
+
+.projectFeed section .projectFeedSliderDown p {
+    color: rgba(0, 0, 0, 0.863);
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.projectFeed section .projectFeedSliderDown ul {
+    position: relative;
+}
+
+.projectFeed section .projectFeedSliderDown li {
+    list-style: none;
+    line-height: 20px;
+    margin-left: 20px;
+}
+
+.projectFeed section .projectFeedSliderDown i {
+    color: #0880ad;
+}
+
+.projectFeed section .projectFeedSliderDown li::before {
+    content: "";
+    height: 51px;
+    width: 1.5px;
+    background-color: #aba3a3;
+    position: absolute;
+    left: 2%;
+    top: 0%;
+    display: inline-block;
+}
+
+.projectFeed section .projectFeedSliderDown li:nth-child(1)::after {
+    content: "";
+    height: 2px;
+    width: 11px;
+    background-color: #aba3a3;
+    position: relative;
+    display: inline-block;
+    left: -93px;
+    bottom: 3px;
+}
+
+.projectFeed section .projectFeedSliderDown li:nth-child(2)::after {
+    content: "";
+    height: 2px;
+    width: 11px;
+    background-color: #aba3a3;
+    position: relative;
+    display: inline-block;
+    left: -91px;
+    bottom: 3px;
+}
+
+.projectFeed section .projectFeedSliderDown li:nth-child(3)::after {
+    content: "";
+    height: 2px;
+    width: 11px;
+    background-color: #aba3a3;
+    position: relative;
+    display: inline-block;
+    left: -94px;
+    bottom: 3px;
+}
+
+.projectFeed section .projectFeedSliderDown .progressP {
+    color: #696565;
+    margin-top: 8%;
+    padding-bottom: 3%;
+    position: relative;
+}
+
+.projectFeed section .projectFeedSliderDown .progressDiv {
+    margin: 0;
+    width: 90%;
+    background-color: #d1caca;
+    padding: 0;
+}
+
+.projectFeed section .projectFeedSliderDown .progressDiv span {
+    width: 70%;
+    /* background-color: #00A8E8; */
+}
+
+.projectFeed section .projectFeedSliderDown:nth-child(2) .progressDiv span, .projectFeed section .projectFeedSliderDown:nth-child(4) .progressDiv span, .projectFeed section .projectFeedSliderDown:nth-child(10) .progressDiv span {
+    background-color: #00A8E8;
+}
+
+.projectFeed section .projectFeedSliderDown:nth-child(6) .progressDiv span {
+    background-color: #15963b;
+}
+
+.projectFeed section .projectFeedSliderDown:nth-child(8) .progressDiv span {
+    background-color: rgb(218, 44, 151);
+}
+
+.calendarHolder .dayPlan {
+    width: 50%;
+    height: 100%;
+    padding-left: 3%;
+    color: rgb(88, 86, 86);
+    position: relative;
+    /* background-color: gray; */
+}
+
+.calendarHolder .dayPlan p:first-child b {
+    font-size: 4em;
+    font-weight: lighter;
+}
+
+.calendarHolder .dayPlan div {
+    margin-top: 10%;
+}
+
+.calendarHolder .dayPlan div p {
+    margin-top: 5%;
+    vertical-align: middle;
+    font-weight: lighter;
+}
+
+.calendarHolder .dayPlan div p i {
+    margin-right: 4%;
+    font-size: 0.6em;
+    position: relative;
+    top: -1px;
+}
+
+.calendarHolder .dayPlan div p:nth-child(1) i {
+    color: aqua;
+}
+
+.calendarHolder .dayPlan div p:nth-child(2) i {
+    color: green;
+}
+
+.calendarHolder .dayPlan div p:nth-child(3) i {
+    color: red;
+}
+
+.calendarHolder .dayPlan div p:nth-child(4) i {
+    color: orange;
+}
+
+.calendarHolder .dayPlan div p:last-child {
+    position: absolute;
+    bottom: 5%;
+    color: #00A8E8;
+    font-weight: 50;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.calendarHolder .calender {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.statisticSection {
+    height: 400px;
+    display: flex;
+    color: rgb(80, 75, 75);
+    font-size: 0.8em;
+}
+
+.statisticSection>div:nth-child(1), .statisticSection>div:nth-child(2) {
+    height: 100%;
+    width: 33%;
+    background-color: white;
+    margin-left: 0.5%;
+    margin-right: 1%;
+    overflow-y: auto;
+}
+
+
+
+.statisticSection>div:nth-child(3) {
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.statisticSection>div:nth-child(1)>p {
+    padding: 3% 6%;
+}
+
+.statisticSection .statisticsByDays {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+}
+
+.statisticSection .statisticsByDays .borderBottom {
+    position: absolute;
+    width: 13%;
+    height: 2px;
+    background-color: #7863a0;
+    top: 20px;
+    left: 10%;
+    transition: 0.3s;
+}
+
+.statisticSection .statisticsByDays span {
+    width: 32%;
+    cursor: pointer;
+}
+
+.statisticSection .statisticsCharts img {
+    width: 100%;
+}
+
+.statisticSection .statisticsMonths .monthHolder {
+    text-align: left;
+    display: flex;
+    margin-top: 5px;
+}
+
+.statisticSection .statisticsMonths .monthHolder span {
+    display: inline-block;
+    width: 34%;
+    padding: 1.2% 3%;
+}
+
+.statisticSection .statisticsMonths .monthHolder span i {
+    margin-right: 8%;
+    font-size: 0.7em;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(1) span:nth-child(1) i {
+    color: #e31e62;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(1) span:nth-child(2) i {
+    color: #7863a0;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(1) span:nth-child(3) i {
+    color: #00bdd5;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(2) span:nth-child(1) i {
+    color: #13b42b;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(2) span:nth-child(2) i {
+    color: #209ca9;
+}
+
+.statisticSection .statisticsMonths .monthHolder:nth-child(2) span:nth-child(3) i {
+    color: #ec531f;
+}
+
+/*TASK LIST*/
+
+.statisticSection .taskList {
+    padding-top: 65px;
+    position: relative;
+    overflow-y: scroll !important;
+}
+
+.statisticSection .taskList>p {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.statisticSection .taskList .checkBoxContainer input {
+    display: none;
+}
+
+.statisticSection .taskList .checkBoxContainer {
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+    /* margin-top: 10px; */
+    /* margin-bottom: 20px; */
+    color: rgb(87, 82, 82);
+    font-weight: lighter;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: auto;
+}
+
+.statisticSection .taskList .checkBoxContainer:nth-child(3), .statisticSection .taskList .checkBoxContainer:nth-child(5) {
+    border-color: #e0427a;
+}
+
+.statisticSection .taskList .checkBoxContainer:nth-child(6) {
+    border-color: rgb(39, 189, 64);
+}
+
+.statisticSection .taskList .checkBoxContainer:hover
+ {
+    background-color: rgb(235, 231, 231);
+    transition: 0.7s;
+}
+
+
+
+.statisticSection .taskList .checkBoxContainer .checkMark {
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    border-radius: 0.5px;
+    transition: 0.2s;
+    border: 0.5px solid rgb(219, 212, 212);
+    margin-left: 10px;
+}
+
+.statisticSection .taskList .checkBoxRow input:checked+.checkMark {
+    background-color: #00bdd5;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(3) input:checked+.checkMark {
+    background-color: #e0427a;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(5) input:checked+.checkMark {
+    background-color: #e0427a;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(6) input:checked+.checkMark {
+    background-color: rgb(39, 189, 64);
+}
+
+.statisticSection .taskList .checkBoxContainer input:checked+.checkMark::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 17%;
+    left: 16%;
+    transform: rotate(-45deg);
+}
+
+.statisticSection .taskList .checkBoxContainer .checkMark::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 53%;
+    left: 24px;
+    width: 0px;
+    height: 0.5px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(1) input:checked+.checkMark::before {
+    width: 91px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(2) input:checked+.checkMark::before {
+    width: 200px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(3) input:checked+.checkMark::before {
+    width: 178px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(4) input:checked+.checkMark::before {
+    width: 174px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(5) input:checked+.checkMark::before {
+    width: 156px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(6) input:checked+.checkMark::before {
+    width: 155px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(7) input:checked+.checkMark::before {
+    width: 172px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(8) input:checked+.checkMark::before {
+    width: 72px;
+}
+
+.statisticSection .taskList .inputSliderDown {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.statisticSection .taskList .inputSliderDown .fas {
+    margin-right: 6px;
+    margin-left: 6px;
+    font-size: 1.3em;
+    color: #787878;
+    transition: 0.3s;
+}
+
+.statisticSection .taskList .inputSliderDown .fa-chevron-down {
+    cursor: pointer;
+}
+
+.statisticSection .taskList .inputSliderDown .fa-times {
+    cursor: pointer;
+}
+
+.statisticSection .taskList .inputSliderDown .chevronUp{
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.statisticSection .taskList .checkBoxRow {
+    position: relative;
+    border-left: 1.7px solid #00bdd5;
+    
+}
+
+.statisticSection .taskList .checkBoxRow .highlighted {
+    background-color: #34a8d6;
+    color: white;
+    padding: 0.8% 1.4%;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.statisticSection .taskList .checkBoxRow:nth-child(3) .highlighted {
+    background-color: #e31e62;
+}
+.statisticSection .taskList .checkBoxRow:nth-child(5) .highlighted {
+    background-color: #13b42b;
+}
+
+
+
+.statisticSection .taskList .hiddenDiv{
+    padding-left: 10px;
+    margin-top: 13px;
+    padding-bottom: 13px;
+    display: none;
+}
+
+.statisticSection .taskList .hiddenDiv:hover{
+    background-color: white;
+    transition: 0.3s;
+}
+
+.statisticSection .taskList .hiddenDiv p{
+    margin-left: 10%;
+}
+
+.statisticSection .taskList .hiddenDiv i{
+    margin-right: 5%;
+}
+
+.statisticSection .taskList .hiddenDiv button{
+    padding: 2%;
+    border-radius: 33px;
+    border: 1px solid #d5cbcb;
+    margin-left: 4%;
+    margin-top: 4%;
+    background-color: white;
+    width: 97px;
+    outline: none;
+
+}
+
+.statisticSection .taskList .hiddenDiv .finishBtn{
+    color: #13b42b;
+    cursor: pointer;
+}
+
+.statisticSection .taskList .hiddenDiv .removeBtn{
+    color: #e31e62;
+    cursor: pointer;
+    
+}
+
+
+.statisticSection .taskList .hiddenDiv .finishBtn:hover{
+    background-color: #13b42b;
+    color: white;
+    box-shadow:0 0 0 4px rgba(19, 180, 43, 0.3);
+    transition: 0.3s;
+}
+
+
+.statisticSection .taskList .hiddenDiv .removeBtn:hover{
+    background-color: #e31e62;
+    color: white;
+    box-shadow:0 0 0 4px #c06988;
+    transition: 0.3s;
+}
+
+
+.statisticSection .totalProgress img{
+    width: 100%;
+}
+
+
+
+
+
+
+/*START OF STATISTICS SECTION */
+
+/*END OF STATISTICS SECTION */
+
+/* CALENDAR STYLING*/
+
+/* CALENDAR STYLING*/
+
+/* CALENDAR STYLING*/
+
+/* CALENDAR STYLING*/
+
+/* CALENDAR STYLING*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calendar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calendar_left {
+    background: #00A8E8;
+    width: 100%;
+    height: 425px;
+    padding: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.calendar_left .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    color: #FFF;
+    font-size: 0.7em;
+}
+
+.calendar_left .header h1 {
+    line-height: 1em;
+}
+
+.calendar_left .header i {
+    cursor: pointer;
+}
+
+.calendar_right {
+    background: #0096cf;
+    width: 350px;
+    height: 415px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    -webkit-transform: scale(0.95) translateX(-10px);
+    transform: scale(0.95) translateX(-10px);
+    z-index: 0;
+}
+
+.calendar_right .list {
+    height: 351px;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
+.calendar_right .list ul {
+    padding: 2.25em;
+}
+
+.calendar_right .list li {
+    padding: 1em;
+    width: 180px;
+    color: #FFF;
+    -webkit-transform: translateX(-700px);
+    transform: translateX(-700px);
+}
+
+.calendar_right .list .description {
+    font-size: 12px;
+}
+
+.calendar_right form {
+    position: absolute;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.calendar_right input {
+    background: #008ec4;
+    border: none;
+    padding: 1.2em;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    outline: none;
+    color: #FFF;
+    border-bottom-right-radius: 5px;
+}
+
+.calendar_right select {
+    background: #007fb0;
+    border: none;
+    padding: 1.2em;
+    outline: none;
+    color: #FFF;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.days {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 400px;
+}
+
+.days .day_item {
+    color: #FFF;
+    width: 50px;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.dates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 350px;
+}
+
+.dates .date_item {
+    color: rgb(241, 241, 241);
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.present {
+    background: #FFF;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    border-radius: 50px;
+    padding: 0.95em !important;
+    color: #00A8E8 !important;
+    z-index: 0;
+    box-shadow: 10px 10px 5px #009dd9;
+    -webkit-animation: bounce-button-in 0.45s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: bounce-button-in 0.45s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+
+::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+.bounce-in.ng-animate {
+    -webkit-animation: none 0s;
+    animation: none 0s;
+}
+
+.bounce-in {
+    -webkit-animation: bounce-in 0.9s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: bounce-in 0.9s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@-webkit-keyframes bounce-in {
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    75% {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+    }
+    100% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+}
+
+@keyframes bounce-in {
+    50% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    75% {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+    }
+    100% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+}
+
+@-webkit-keyframes bounce-button-in {
+    0% {
+        -webkit-transform: translateZ(0) scale(0);
+        transform: translateZ(0) scale(0);
+    }
+    100% {
+        -webkit-transform: translateZ(0) scale(0.7);
+        transform: translateZ(0) scale(0.7);
+    }
+}
+
+@keyframes bounce-button-in {
+    0% {
+        -webkit-transform: translateZ(0) scale(0);
+        transform: translateZ(0) scale(0);
+    }
+    100% {
+        -webkit-transform: translateZ(0) scale(0.7);
+        transform: translateZ(0) scale(0.7);
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1520px){
+   
+    /*VAXT CATMADI ((*/
+}
+
